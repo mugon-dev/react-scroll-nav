@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import Nav from "./Nav";
+import First from "./First";
+import Second from "./Second";
+import Third from "./Third";
+import Fourth from "./Fourth";
+import { TocProvider } from "./Toc";
+import styled from "styled-components";
+const BodyStyle = styled.div``;
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TocProvider>
+        <Nav />
+        <BodyStyle>
+          <First />
+          <Second />
+          <Third />
+          <Fourth />
+        </BodyStyle>
+      </TocProvider>
     </div>
   );
 }
